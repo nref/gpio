@@ -9,7 +9,7 @@ A web service for Raspberry Pi GPIO
     - See http://pinout.xyz/
   
 - Optional heartbeat fail-safe
-  - Turns all pins OFF if it is not called within e.g. 2 seconds.
+  - Turns all pins OFF if it is not called within 2 seconds.
 
 ## Requirements
 
@@ -74,7 +74,7 @@ Same as ```/pins```
 #### /heartbeat/enable
 Enable the heartbeat check.
 
-When the heartbeat check is enabled, the ```/heartbeat``` endpoint must be POSTED to at least once every 2 seconds. 
+When the heartbeat check is enabled, the ```/heartbeat``` endpoint must be POSTed to at least once every 2 seconds. 
 If not, all previously accessed pins are turned OFF.
 
 Example:
@@ -95,7 +95,7 @@ ok
 #### /heartbeat
 Update the heartbeat.
 
-When the heartbeat check is enabled, this endpoint must be called at least once every 2 seconds. 
+When the heartbeat check is enabled, this endpoint must be POSTed to at least once every 2 seconds. 
 If not, all previously accessed pins are turned OFF.
 
 Example:
